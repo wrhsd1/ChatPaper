@@ -1,8 +1,4 @@
-<div style="font-size: 1.5rem;">
-  <a href="./README.md">中文</a> |
-  <a href="./readme_en.md">English</a>
-</div>
-</br>
+💥💥💥<strong>面向全球，服务万千科研人的ChatPaper**免费网页版正式上线：**[https://chatpaper.org/](https://chatpaper.org/) </strong>💥💥💥
 
 <h1 align="center">ChatPaper</h1>
 <div align="center">
@@ -28,15 +24,20 @@
       <br/>
       <a href="https://www.bilibili.com/video/BV1EM411x7Tr/"><strong>视频教程</strong></a>
         ·
-      <a href="https://huggingface.co/spaces/wangrongsheng/ChatPaper"><strong>在线体验</strong></a>
+      <a href="https://chatpaper.org/"><strong>在线体验</strong></a>
     </p>
-    <p align="center">
-      <img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatpaper_0317.png" />
-    </p>
+    
   </p>
 </div>
 
-> **功能免费，代码开源，大家放心使用！** 关于API如何获取，首先你得有一个没有被封的ChatGPT账号，然后[获取Api Key](https://chatgpt.cn.obiscr.com/blog/posts/2023/How-to-get-api-key/) ,填入即可！
+|工具名称|工具作用|是否在线？|在线预览|备注|
+|:-|:-|:-|:-|:-|
+|ChatPaper|通过ChatGPT实现对**论文进行总结，帮助科研人进行论文初筛**|访问[wangrongsheng/ChatPaper](https://huggingface.co/spaces/wangrongsheng/ChatPaper) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatpaper_0317.png" />|[原项目地址](https://github.com/kaixindelele/ChatPaper)|
+|ChatReviewer|利用ChatGPT对论文进行**预审稿**|访问[ShiwenNi/ChatReviewer](https://huggingface.co/spaces/ShiwenNi/ChatReviewer) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatrevierer.png" />|[原项目地址](https://github.com/nishiwen1214/ChatReviewer)|
+|ChatImprovement|利用ChatGPT对**论文初稿进行润色、翻译等**|访问[wangrongsheng/ChatImprovement](https://huggingface.co/spaces/wangrongsheng/ChatImprovement) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/ChatImprovement.png" />|[原项目地址](https://github.com/binary-husky/chatgpt_academic)|
+|ChatResponse|利用ChatGPT对**审稿人的提问进行回复**|暂无|暂无|[原项目地址](https://github.com/nishiwen1214/ChatReviewer)|
+
+> **所有功能免费，代码开源，大家放心使用！** 关于API如何获取，首先你得有一个没有被封的ChatGPT账号，然后[获取Api Key](https://chatgpt.cn.obiscr.com/blog/posts/2023/How-to-get-api-key/) ,填入即可！
 
 
 - [💥最新讯息](#最新讯息)
@@ -52,8 +53,11 @@
 
 
 ## 最新讯息
+- 🌟*2023.03.23*: chat_arxiv.py可以从arxiv网站，根据关键词，最近几天，几篇论文，直接爬取最新的领域论文了！解决了之前arxiv包的搜索不准确问题！
+- 🌟*2023.03.23*: ChatPaper终于成为完成体了！现在已经有论文总结+论文润色+论文审稿+论文审稿回复等功能了！
+虽然我们上线了这个功能，但是大家用于审稿的时候，一定要注意学术伦理！千万别用它真的做审稿使用！
 
-- 🌟*2023.03.19*: 全新的ChatPaper网页版即将上线！
+**增加了ChatReviewer（模拟顶会审稿人，自动评审论文，⭐️千万别复制粘贴直接使用！一定要注意审稿伦理和责任！该功能仅供大家作为参考！）和ChatResponse（自动提取审稿人的问题并一对一生成回复），该部分的代码均来自于[nishiwen1214](https://github.com/nishiwen1214)的[ChatReviewer](https://github.com/nishiwen1214/ChatReviewer)项目。** 使用技巧请参考这位大佬的项目！
 
 ## 开发动机
 
@@ -109,8 +113,16 @@ pip install -r requirements.txt
 
 4.1. Arxiv在线批量搜索+下载+总结： 运行chat_paper.py， 比如：
 ```python
-python chat_paper.py --query "chatgpt robot" --filter_keys "chatgpt robot" --max_results 3
+python chat_arxiv.py --query "chatgpt robot" --filter_keys "chatgpt robot" --max_results 3
 ```
+
+更准确的脚本是chat_arxiv.py，使用方案，命令行更加简洁：
+```python
+python chat_paper.py --query "chatgpt robot" --page_num 2 --max_results 3 --days 2
+```
+
+其中query仍然是关键词，page_num是搜索的页面，每页和官网一样，最大是50篇，max_results是最终总结前N篇的文章，days是选最近几天的论文，严格筛选！
+
 
 **注意：搜索词无法识别`-`，只能识别空格！所以原标题的连字符最好不要用！** 感谢网友提供的信息
 
@@ -133,6 +145,8 @@ python chat_paper.py --pdf_path "demo.pdf"
 ```python
 python chat_paper.py --pdf_path "your_absolute_path"
 ```
+
+另外注意，目前这个不支持**综述类**文章。
 
 B站讲解视频：[我把ChatPaper开源了！AI速读PDF论文和速通Arxiv论文](https://www.bilibili.com/video/BV1EM411x7Tr/)
 
@@ -261,10 +275,11 @@ os.environ["https_proxy"] = "http://<代理ip>:<代理端口>"
 4. [Arxiv](https://github.com/lukasschwab/arxiv.py)的作者提供的好用的arxiv论文下载包。
 5. [PyMuPDF](https://github.com/pymupdf/PyMuPDF)提供良好的PDF解析工具。让整个信息流得以打通。
 6. OpenAI一方面做出了杰出的AI，另外一方面禁了我们国家，搞得我都不知道该怎么写这行。
-7. 感谢Ex-ChatGPT的作者分享的各种ChatGPT的开发细节，开发过程中学习良多。另外给计算机专业的佬们，推荐这款非常强大的开源工具：
+7. 感谢Ex-ChatGPT的作者分享的各种ChatGPT的开发细节，开发过程中学习良多，以及现在一直在开发我们的网页版内容。另外给计算机专业的佬们，推荐这款非常强大的开源工具：
+8. 感谢ChatReviewer的作者将他的项目合并到我们的ChatPaper中，使得ChatPaper更加完整。
 [Ex-ChatGPT](https://github.com/circlestarzero/EX-chatGPT) 是一个强大的工具平台，能让 ChatGPT 能够调用外部 API，例如 WolframAlpha、Google 和 WikiMedia，以提供更准确和及时的答案。
 江湖人称 GoogleChat.
-8. 最后感谢GitHub官方，帮我们这个项目列入了[热榜第五](https://github.com/trending)，获得了大量的关注！
+9. 最后感谢GitHub官方，帮我们这个项目列入了[热榜第五](https://github.com/trending)，获得了大量的关注！
 
 ## 赞助我们
 
