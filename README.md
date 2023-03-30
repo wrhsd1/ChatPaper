@@ -1,5 +1,6 @@
 💥💥💥<strong>面向全球，服务万千科研人的ChatPaper**免费网页版正式上线：**[https://chatpaper.org/](https://chatpaper.org/) </strong>💥💥💥
 
+💥💥💥<strong>网页版现在急缺一位前端开发，帮忙把开源的内容搬到网站上，欢迎有相关开发经验的同学邮件我! </strong>💥💥💥
 <h1 align="center">ChatPaper</h1>
 <div align="center">
   <a href="https://github.com/kaixindelele/ChatPaper">
@@ -30,12 +31,14 @@
   </p>
 </div>
 
+
+ChatPaper全流程加速科研：论文阅读+润色+审稿+审稿回复
 |工具名称|工具作用|是否在线？|在线预览|备注|
 |:-|:-|:-|:-|:-|
-|ChatPaper|通过ChatGPT实现对**论文进行总结，帮助科研人进行论文初筛**|访问[wangrongsheng/ChatPaper](https://huggingface.co/spaces/wangrongsheng/ChatPaper) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatpaper_0317.png" />|[原项目地址](https://github.com/kaixindelele/ChatPaper)|
+|ChatPaper|通过ChatGPT实现对**论文进行总结，帮助科研人进行论文初筛**|访问[wangrongsheng/ChatPaper](https://chatpaper.org/) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatpaper_0317.png" />|[原项目地址](https://github.com/kaixindelele/ChatPaper)|
 |ChatReviewer|利用ChatGPT对论文进行**预审稿**|访问[ShiwenNi/ChatReviewer](https://huggingface.co/spaces/ShiwenNi/ChatReviewer) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatrevierer.png" />|[原项目地址](https://github.com/nishiwen1214/ChatReviewer)|
 |ChatImprovement|利用ChatGPT对**论文初稿进行润色、翻译等**|访问[wangrongsheng/ChatImprovement](https://huggingface.co/spaces/wangrongsheng/ChatImprovement) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/ChatImprovement.png" />|[原项目地址](https://github.com/binary-husky/chatgpt_academic)|
-|ChatResponse|利用ChatGPT对**审稿人的提问进行回复**|暂无|暂无|[原项目地址](https://github.com/nishiwen1214/ChatReviewer)|
+|ChatResponse|利用ChatGPT对**审稿人的提问进行回复**|访问[ShiwenNi/ChatResponse](https://huggingface.co/spaces/ShiwenNi/ChatResponse) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatresponse.jpg" />|[原项目地址](https://github.com/nishiwen1214/ChatReviewer)|
 
 > **所有功能免费，代码开源，大家放心使用！** 关于API如何获取，首先你得有一个没有被封的ChatGPT账号，然后[获取Api Key](https://chatgpt.cn.obiscr.com/blog/posts/2023/How-to-get-api-key/) ,填入即可！
 
@@ -43,6 +46,7 @@
 - [💥最新讯息](#最新讯息)
 - [💫开发动机](#开发动机)
 - [⛏️使用步骤](#使用步骤)
+- [👷‍♂️在线部署](#在线部署)
 - [📄解析示例](#解析示例)
 - [👁️‍🗨️使用技巧](#使用技巧)
 - [🛠️常见报错](#常见报错)
@@ -113,12 +117,12 @@ pip install -r requirements.txt
 
 4.1. Arxiv在线批量搜索+下载+总结： 运行chat_paper.py， 比如：
 ```python
-python chat_arxiv.py --query "chatgpt robot" --filter_keys "chatgpt robot" --max_results 3
+python chat_paper.py --query "chatgpt robot" --filter_keys "chatgpt robot" --max_results 3
 ```
 
 更准确的脚本是chat_arxiv.py，使用方案，命令行更加简洁：
 ```python
-python chat_paper.py --query "chatgpt robot" --page_num 2 --max_results 3 --days 2
+python chat_arxiv.py --query "chatgpt robot" --page_num 2 --max_results 3 --days 2
 ```
 
 其中query仍然是关键词，page_num是搜索的页面，每页和官网一样，最大是50篇，max_results是最终总结前N篇的文章，days是选最近几天的论文，严格筛选！
@@ -178,6 +182,15 @@ parser.add_argument("--sort", default=arxiv.SortCriterion.Relevance, help="anoth
 parser.add_argument("--save_image", default=False, help="save image? It takes a minute or two to save a picture! But pretty")
 parser.add_argument("--file_format", type=str, default='md', help="导出的文件格式，如果存图片的话，最好是md，如果不是的话，txt的不会乱")
 ```
+
+## 在线部署
+
+1. 在[Hugging Face](https://huggingface.co/) 创建自己的个人账号并登录；
+2. 进入ChatPaper主仓库：[https://huggingface.co/spaces/wangrongsheng/ChatPaper](https://huggingface.co/spaces/wangrongsheng/ChatPaper) ，您可以在[Files and Version](https://huggingface.co/spaces/wangrongsheng/ChatPaper/tree/main) 看到所有的最新部署代码；
+3. [可选]私有化部署使用：点击[Duplicate this space](https://huggingface.co/spaces/wangrongsheng/ChatPaper?duplicate=true) ，在弹出的页面中将`Visibility`选择为`Private`，最后点击`Duplicate Space`，Space的代码就会部署到你自己的Space中，为了方便自己每次调用可以不用填写API-key，您可以将[app.py#L845](https://huggingface.co/spaces/wangrongsheng/ChatPaper/blob/5335124d25b1bc4017a2f5c48b0038dfa545bf63/app.py#L845) 修改为您的密钥：`default="sk-abcdxxxxxxxx"` ，点击保存文件就会立即重新部署了；
+4. [可选]公有化部署使用：点击[Duplicate this space](https://huggingface.co/spaces/wangrongsheng/ChatPaper?duplicate=true) ，在弹出的页面中将`Visibility`选择为`Public`，最后点击`Duplicate Space`，Space的代码就会部署到你自己的Space中，这样就可以完成一个公有化的部署。
+
+> 注：公有化部署和私有化部署根据你的需求二选一即可！
 
 ## 解析示例
 
@@ -257,7 +270,9 @@ os.environ["http_proxy"] = "http://<代理ip>:<代理端口>"
 os.environ["https_proxy"] = "http://<代理ip>:<代理端口>"
 
 代理ip和端口需要你在Windows系统里面查找。
-![2333](https://user-images.githubusercontent.com/28528386/224496999-1a8a7946-00aa-4d51-9f18-45bdde4215b9.png)
+<div style="text-align: center;">
+  <img src=https://user-images.githubusercontent.com/28528386/224496999-1a8a7946-00aa-4d51-9f18-45bdde4215b9.png width="400" height="300"/>
+</div>
 
 
 3. API被OpenAI禁了的报错：
@@ -279,7 +294,8 @@ os.environ["https_proxy"] = "http://<代理ip>:<代理端口>"
 8. 感谢ChatReviewer的作者将他的项目合并到我们的ChatPaper中，使得ChatPaper更加完整。
 [Ex-ChatGPT](https://github.com/circlestarzero/EX-chatGPT) 是一个强大的工具平台，能让 ChatGPT 能够调用外部 API，例如 WolframAlpha、Google 和 WikiMedia，以提供更准确和及时的答案。
 江湖人称 GoogleChat.
-9. 最后感谢GitHub官方，帮我们这个项目列入了[热榜第五](https://github.com/trending)，获得了大量的关注！
+9. 还得感谢GitHub官方，帮我们这个项目列入了[热榜第五](https://github.com/trending)，获得了大量的关注！
+10. 后面我们整个项目流程打通，需要感谢同样是中科院的同学们开发的[chatgpt_academic](https://github.com/binary-husky/chatgpt_academic)，我们在他们的基础上做了润色部分。以及[nishiwen1214](https://github.com/nishiwen1214)的[ChatReviewer](https://github.com/nishiwen1214/ChatReviewer)，补齐了我们的审稿和审稿回复。
 
 ## 赞助我们
 
@@ -289,10 +305,6 @@ os.environ["https_proxy"] = "http://<代理ip>:<代理端口>"
 
 <div style="text-align: center;">
   <img src=https://user-images.githubusercontent.com/28528386/224892765-d22a36ad-7bd6-41ed-9e89-f7fe5e88944b.png width="200" height="250"/>
-</div>
-
-<div style="text-align: center;">
-  <img src=https://user-images.githubusercontent.com/28528386/224335122-1e87eb7b-a922-4c2f-b2aa-9612f62a6314.jpg width="200" height="250"/>
 </div>
 
 ## Starchart
