@@ -1,10 +1,34 @@
-💥💥💥<strong>面向全球，服务万千科研人的ChatPaper**免费网页版正式上线：**[https://chatpaper.org/](https://chatpaper.org/) </strong>💥💥💥
+<div style="font-size: 1.5rem;">
+  <a href="./README.md">中文</a> |
+  <a href="./readme_en.md">English</a>
+</div>
+</br>
 
-💥💥💥<strong>网页版现在急缺一位前端开发，帮忙把开源的内容搬到网站上，欢迎有相关开发经验的同学邮件我! </strong>💥💥💥
+
+💥💥💥<strong>5.10 我们网页版的即将进行更新，现在的总结效果如链接所示：[Sergey Levine近两个月12篇文章总结-ChatPaperDaily6](https://zhuanlan.zhihu.com/p/628338077)，总结的内容更加全面且准确，更多的细节，更多的步骤，更多实验结果，且尽可能的降低瞎编. 
+ </strong>
+
+💥💥💥<strong>**唯一官方网站：**[https://chatpaper.org/](https://chatpaper.org/) ，以及小白教程【ChatPaper网页版使用小白教程-哔哩哔哩】 https://b23.tv/HpDkcBU， 第三方文档：https://chatpaper.readthedocs.io . 
+ </strong>
+ 
+💥💥💥<strong> 4.22 为了庆祝ChatPaper获得一万⭐，我们将联合两位同学，推出两个AI辅助文献总结工具，第一个是[auto-draft](https://github.com/CCCBora/auto-draft)，AI自动搜集整理出文献总结！第二个是综述文章归纳，后面会上线我们网页版。敬请期待
+</strong>
+
+💥💥💥<strong> 为了降低学术伦理风险，我们为Chat_Reviewer增加了复杂的文字注入，效果如图：[示例图](https://github.com/kaixindelele/ChatPaper/blob/main/images/reviews.jpg) ，希望各位老师同学在使用的时候，一定要注意学术伦理和学术声誉，不要滥用工具。如果谁有更好的方法来限制少数人的不规范使用，欢迎留言，为科研界做一份贡献。
+</strong>
+
+💥💥💥<strong> 最近在开源众筹一个基于OpenReview的微调项目，欢迎大家一起搞事情：[ChatOpenReview](https://github.com/kaixindelele/ChatOpenReview)
+  
+</strong>
+
+🌿🌿🌿<strong>使用卡顿？请Fork到自己的Space，轻松使用：<a href="https://huggingface.co/spaces/wangrongsheng/ChatPaper?duplicate=true"><img src="https://bit.ly/3gLdBN6" alt="Duplicate Space"></a></strong>
+
+💥💥💥<strong>荣胜同学今天发布了一个非常有意思的工作[ChatGenTitle](https://github.com/WangRongsheng/ChatGenTitle)，提供摘要生成标题，基于220wArXiv论文的数据微调的结果！ </strong>
+
 <h1 align="center">ChatPaper</h1>
 <div align="center">
   <a href="https://github.com/kaixindelele/ChatPaper">
-    <img src="https://github.com/kaixindelele/ChatPaper/blob/main/images/home.png" alt="Logo" height="210">
+  <img src="https://github.com/kaixindelele/ChatPaper/blob/main/images/homeLogo.jpg" width="50%">
   </a>
 
   <p align="center">
@@ -27,18 +51,19 @@
         ·
       <a href="https://chatpaper.org/"><strong>在线体验</strong></a>
     </p>
-    
+
   </p>
 </div>
 
+<h1 align="center">ChatPaper全流程加速科研：论文阅读+润色+优缺点分析与改进建议+审稿回复</h1>
 
-ChatPaper全流程加速科研：论文阅读+润色+审稿+审稿回复
 |工具名称|工具作用|是否在线？|在线预览|备注|
 |:-|:-|:-|:-|:-|
 |ChatPaper|通过ChatGPT实现对**论文进行总结，帮助科研人进行论文初筛**|访问[wangrongsheng/ChatPaper](https://chatpaper.org/) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatpaper_0317.png" />|[原项目地址](https://github.com/kaixindelele/ChatPaper)|
-|ChatReviewer|利用ChatGPT对论文进行**预审稿**|访问[ShiwenNi/ChatReviewer](https://huggingface.co/spaces/ShiwenNi/ChatReviewer) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatrevierer.png" />|[原项目地址](https://github.com/nishiwen1214/ChatReviewer)|
-|ChatImprovement|利用ChatGPT对**论文初稿进行润色、翻译等**|访问[wangrongsheng/ChatImprovement](https://huggingface.co/spaces/wangrongsheng/ChatImprovement) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/ChatImprovement.png" />|[原项目地址](https://github.com/binary-husky/chatgpt_academic)|
+|ChatReviewer|利用ChatGPT对论文进行**优缺点分析，提出改进建议**|访问[ShiwenNi/ChatReviewer](https://huggingface.co/spaces/ShiwenNi/ChatReviewer) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatrevierer.png" />|[原项目地址](https://github.com/nishiwen1214/ChatReviewer)|
+|ChatImprovement|利用ChatGPT对**论文初稿进行润色、翻译等**|访问[qingxu98/gpt-academic](https://huggingface.co/spaces/qingxu98/gpt-academic) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/ChatImprovement.png" />|[原项目地址](https://github.com/binary-husky/chatgpt_academic)|
 |ChatResponse|利用ChatGPT对**审稿人的提问进行回复**|访问[ShiwenNi/ChatResponse](https://huggingface.co/spaces/ShiwenNi/ChatResponse) 使用|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatresponse.jpg" />|[原项目地址](https://github.com/nishiwen1214/ChatReviewer)|
+|ChatGenTitle|利用百万arXiv论文元信息训练出来的论文题目生成模型，**根据论文摘要生成合适题目**|<a href="https://drive.google.com/file/d/1akrC4-YnYdiyD1_VK-92hncN7HS0FLf5/view?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>|<img alt="Animation Demo" src="https://github.com/kaixindelele/ChatPaper/blob/main/images/chatgentitle.png" />|[原项目地址](https://github.com/WangRongsheng/ChatGenTitle)|
 
 > **所有功能免费，代码开源，大家放心使用！** 关于API如何获取，首先你得有一个没有被封的ChatGPT账号，然后[获取Api Key](https://chatgpt.cn.obiscr.com/blog/posts/2023/How-to-get-api-key/) ,填入即可！
 
@@ -57,11 +82,11 @@ ChatPaper全流程加速科研：论文阅读+润色+审稿+审稿回复
 
 
 ## 最新讯息
+- 🌟*2023.03.31*: 目前已经离线总结了3w+的CCF-A会议论文了，以后大家可以不用等那么久了！
 - 🌟*2023.03.23*: chat_arxiv.py可以从arxiv网站，根据关键词，最近几天，几篇论文，直接爬取最新的领域论文了！解决了之前arxiv包的搜索不准确问题！
-- 🌟*2023.03.23*: ChatPaper终于成为完成体了！现在已经有论文总结+论文润色+论文审稿+论文审稿回复等功能了！
-虽然我们上线了这个功能，但是大家用于审稿的时候，一定要注意学术伦理！千万别用它真的做审稿使用！
+- 🌟*2023.03.23*: ChatPaper终于成为完成体了！现在已经有论文总结+论文润色+论文分析与改进建议+论文审稿回复等功能了！
 
-**增加了ChatReviewer（模拟顶会审稿人，自动评审论文，⭐️千万别复制粘贴直接使用！一定要注意审稿伦理和责任！该功能仅供大家作为参考！）和ChatResponse（自动提取审稿人的问题并一对一生成回复），该部分的代码均来自于[nishiwen1214](https://github.com/nishiwen1214)的[ChatReviewer](https://github.com/nishiwen1214/ChatReviewer)项目。** 使用技巧请参考这位大佬的项目！
+**增加了ChatReviewer（对论文进行优缺点分析，提出改进建议，⭐️千万别复制生成的内容用于论文评审！一定要注意审稿伦理和责任！该功能仅供大家作为参考！）和ChatResponse（自动提取审稿人的问题并一对一生成回复），该部分的代码均来自于[nishiwen1214](https://github.com/nishiwen1214)的[ChatReviewer](https://github.com/nishiwen1214/ChatReviewer)项目。** 使用技巧请参考这位大佬的项目！
 
 ## 开发动机
 
@@ -83,15 +108,47 @@ ChatPaper是一款论文总结工具。AI用一分钟总结论文，用户用一
 
 这段代码虽然不多，但整个流程走通也花了我近一周的时间，今天分享给大家。
 
-不知道能不能用这个工具，实现我小时候的梦想-- 如果每个中国人给我一块钱，那我就发财了 哈哈~
+如果您能提供一瓶阔乐的赞助，就可以帮助支付网页运营的API和服务器成本，并让我们有动力继续开发更多更高质量的服务！
 
-言归正传，不强制付费，但是真的希望每个觉得能帮你节省时间的研究生，在花几块钱买API的同时，能够给我一块钱奖励，非常感谢！
+目前我们网站运营费用每天都有60美元的API消耗，如果您有意向对我们的项目进行赞助，我们将不胜感激，并期待与您的合作！
 
-您的支持，是我持续更新的动力！如果有大佬愿意多支持，也是非常欢迎的！
+您的支持，是我持续更新的动力和赞赏！
+
+<div style="text-align: center;">
+  <img src=https://user-images.githubusercontent.com/28528386/224892765-d22a36ad-7bd6-41ed-9e89-f7fe5e88944b.png width="200" height="250"/>
+</div>
 
 欢迎大家加入光荣的进化！
 
+## 技术原理：
+
+论文总结遵循下面四个问题：
+
+1. 研究背景
+
+2. 过去的方案是什么？他们有什么问题？
+
+3. 本文方案是什么？具体步骤是什么？
+
+4. 本文在哪些任务中，取得了什么效果？
+
+基本上是大家做论文汇报的主要内容了。
+
+实现细节：
+提取摘要和introduction的内容，因为abstract很少会告诉你过去的方案是什么，存在什么问题。
+
+然后提取method章节，总结方法的具体步骤
+
+最后提取conclusion章节，总结全文。
+
+分三次总结和喂入，如果每个部分超过了长度，则截断（目前这个方案太粗暴了，但也没有更好的更优雅的方案）
+
+作为初筛，勉强够用。
+
+
 ## 使用步骤
+
+### 一、以脚本方式运行
 
 Windows, Mac和Linux系统应该都可以
 
@@ -122,7 +179,7 @@ python chat_paper.py --query "chatgpt robot" --filter_keys "chatgpt robot" --max
 
 更准确的脚本是chat_arxiv.py，使用方案，命令行更加简洁：
 ```python
-python chat_arxiv.py --query "chatgpt robot" --page_num 2 --max_results 3 --days 2
+python chat_arxiv.py --query "chatgpt robot" --page_num 2 --max_results 3 --days 10
 ```
 
 其中query仍然是关键词，page_num是搜索的页面，每页和官网一样，最大是50篇，max_results是最终总结前N篇的文章，days是选最近几天的论文，严格筛选！
@@ -135,9 +192,13 @@ python chat_arxiv.py --query "chatgpt robot" --page_num 2 --max_results 3 --days
 python chat_paper.py --query "all: reinforcement learning robot 2023" --filter_keys "reinforcement robot" --max_results 3
 ```
 
+💥💥💥<strong>7K星了，发布一个猫娘版提示词，希望大家一起让猫娘活起来~：[脚本：chat_arxiv_maomao.py](https://github.com/kaixindelele/ChatPaper/blob/main/chat_arxiv_maomao.py)， [总结图片](https://github.com/kaixindelele/ChatPaper/blob/main/images/maomao.png) </strong>
+  
+</details>
+
 4.3. Arxiv在线批量搜索+下载+总结+高级搜索+指定作者： 运行chat_paper.py， 比如：
 ```python
-python chat_paper.py --query "ti: Sergey Levine" --filter_keys "reinforcement robot" --max_results 3
+python chat_paper.py --query "au: Sergey Levine" --filter_keys "reinforcement robot" --max_results 3
 ```
 
 4.4. 本地pdf总结： 运行chat_paper.py， 比如：
@@ -149,6 +210,20 @@ python chat_paper.py --pdf_path "demo.pdf"
 ```python
 python chat_paper.py --pdf_path "your_absolute_path"
 ```
+
+4.6. 谷歌学术论文整理： 运行google_scholar_spider.py， 比如：
+
+```
+python google_scholar_spider.py --kw "deep learning" --nresults 30 --csvpath "./data" --sortby "cit/year" --plotresults 1
+```
+
+此命令在Google Scholar上搜索与“deep learning”相关的文章，检索30个结果，将结果保存到“./data”文件夹中的CSV文件中，按每年引用次数排序数据，并绘制结果。
+
+具体使用和参数请参考https://github.com/JessyTsu1/google_scholar_spider
+
+
+
+---
 
 另外注意，目前这个不支持**综述类**文章。
 
@@ -182,6 +257,75 @@ parser.add_argument("--sort", default=arxiv.SortCriterion.Relevance, help="anoth
 parser.add_argument("--save_image", default=False, help="save image? It takes a minute or two to save a picture! But pretty")
 parser.add_argument("--file_format", type=str, default='md', help="导出的文件格式，如果存图片的话，最好是md，如果不是的话，txt的不会乱")
 ```
+
+### 二、 以Flask服务运行
+
+1. 下载项目并进入项目目录
+
+```text
+git clone https://github.com/kaixindelele/ChatPaper.git
+cd ChatPaper
+```
+
+2. 在项目根目录下的 `apikey.ini` 文件中填入您的 OpenAI 密钥。
+3. 配置虚拟环境并下载依赖
+
+```text
+pip install virtualenv 
+安装虚拟环境工具
+virtualenv venv 
+新建一个名为venv的虚拟环境
+Linux/Mac下:
+source venv/bin/activate
+
+Windows下:
+.\venv\Scripts\activate.bat
+
+pip install -r requirements.txt
+```
+4. 启动服务
+
+```text
+python3 app.py
+# 启动 Flask 服务。运行此命令后，Flask 服务将在本地的 5000 端口上启动并等待用户请求。在浏览器中访问以下地址之一以访问 Flask 服务的主页：
+# http://127.0.0.1:5000/
+# 或
+# http://127.0.0.1:5000/index
+```
+
+访问 http://127.0.0.1:5000/ 后，您将看到主页。在主页上，您可以点击不同的链接来调用各种服务。您可以通过修改链接中的参数值来实现不同的效果。有关参数详细信息，请参阅上一步骤中的详细介绍
+
+![flask主界面](./images/flask_web_home.png)
+
++ 特别的，这四个接口实际是封装了根目录下四个脚本的 web 界面。参数可以通过链接来修改。例如要运行“arxiv?query=GPT-4&key_word=GPT+robot&page_num=1&max_results=1&days=1&sort=web&save_image=False&file_format=md&language=zh”的话，相当于在根目录下调用 chat_arxiv.py 并返回结果。这个显示的结果和在命令行中调用的结果是一样的（即：python chat_arxiv.py --query "GPT-4" --key_word "GPT robot" --page_num 1 --max_results 1 --days 1 --sort "web" --save_image False --file_format "md" --language "zh"）。您可以通过修改参数来获得其他搜索结果。
+
+  如果以这种方式部署的话，结果会保存在同级目录下新生成的export、pdf_files 和response_file三个文件夹里
+
+### 三、以docker形式运行
+
+1. 安装docker和docker-compose，可以参考以下链接
+
+   https://yeasy.gitbook.io/docker_practice/install
+
+   https://yeasy.gitbook.io/docker_practice/compose/install
+
+2. 找地方放项目根目录下的“docker-compose.yaml”文件，将21行的`YOUR_KEY_HERE`替换为自己的openai_key
+
+3. 在同级目录下在命令行运行
+
+   ```
+   docker-compose up -d
+   ```
+
+4. 这样的界面代表一些正常，随后访问https://127.0.0.1:28460/ 就可以从网页上打开了! ![docker-compose](./images/docker-compose.png)
+
++ 特别的，如果有改进项目的想法，您可以查看 build.sh、dev.sh、tagpush.sh这三个脚本以及根目录docker目录下文件的作用，相信它们会对你容器化封装项目的思想有进一步提升
+
++ 所有的运行结果都被保存在 Docker 的 volumes 中，如果想以服务的形式长期部署，您可以将这些目录映射出来。默认情况下，它们位于 /var/lib/docker/volumes/ 下。您可以进入该目录并查看 chatpaper_log、chatpaper_export、chatpaper_pdf_files 和 chatpaper_response_file 四个相关文件夹中的结果。有关 Docker volumes 的详细解释，请参考此链接：http://docker.baoshu.red/data_management/volume.html。
+
+  
+  
+  
 
 ## 在线部署
 
@@ -232,7 +376,7 @@ parser.add_argument("--file_format", type=str, default='md', help="导出的文�
 <p>(2):虽然本文提出了一种新的机器人视觉动作策略学习方法，并在实验中取得了良好的表现，但该方法的优化过程可能比较耗时。此外，该方法的性能受到多种因素的影响，包括演示的质量和数量、机器人的物理能力以及策略架构等，这些因素需在实际应用场景中加以考虑。</p>
 <p>(3):如果让我来推荐，我会给这篇文章打9分。该篇文章提出的Diffusion Policy方法具有较高的可解释性、性能表现良好、实验结果稳定等优点，能够为机器人视觉动作策略学习等领域带来很大的启发与借鉴。唯一的不足可能是方法的优化过程需要投入更多的时间和精力。</p>
 </details>
-  
+
 ## 使用技巧
 
 快速刷特定关键词的论文，不插图的话，每张篇文章需要花一分钟，阅读时间差不多一分钟。
@@ -281,6 +425,16 @@ os.environ["https_proxy"] = "http://<代理ip>:<代理端口>"
 
 这种情况只能用新号了。另外一定要注意一个号尽量不要多刷，节点一定要靠谱，千万不能用大陆和香港的节点，用了就寄。
 
+4. Https通信错误：
+![KBVVRL`KI560X~$27GLDQYI](https://user-images.githubusercontent.com/28528386/229026391-7cfacf76-e18c-4ae3-a8d5-b8736e8dd056.jpg)
+
+这个报错大概率是节点不够干净。如果有大佬知道具体原因，欢迎挂issues
+
+[issue174](https://github.com/kaixindelele/ChatPaper/issues/174)提供的方案是：
+```python
+pip install urllib3==1.25.11
+```
+
 ## 项目致谢
 
 本项目三天一千star的时刻，我补一下对这个项目的促成的各位致谢！
@@ -296,16 +450,9 @@ os.environ["https_proxy"] = "http://<代理ip>:<代理端口>"
 江湖人称 GoogleChat.
 9. 还得感谢GitHub官方，帮我们这个项目列入了[热榜第五](https://github.com/trending)，获得了大量的关注！
 10. 后面我们整个项目流程打通，需要感谢同样是中科院的同学们开发的[chatgpt_academic](https://github.com/binary-husky/chatgpt_academic)，我们在他们的基础上做了润色部分。以及[nishiwen1214](https://github.com/nishiwen1214)的[ChatReviewer](https://github.com/nishiwen1214/ChatReviewer)，补齐了我们的审稿和审稿回复。
+11. 感谢[SilenceEagle](https://github.com/SilenceEagle/paper_downloader)提供的CCF-A的论文数据库，我们已经离线总结了3w+的论文了。
+12. 感谢里屋社区的开源和整理中文数据集[MNBVC](https://github.com/esbatmop/MNBVC)，希望国产中文大模型早日起飞！
 
-## 赞助我们
-
-感谢您对我们ChatPaper辅助论文写作工具开发项目的关注和支持！我们的项目旨在为科研人员提供一款高效、智能的辅助工具，帮助他们更便捷地完成论文总结等工作，提升学术水平和研究成果的质量。
-与此同时，我们也欢迎来自各界的赞助和支持，这将帮助我们更快地推进项目的开发和完善，并且可以使我们的工具更加符合用户需求。如果您有意向对我们的项目进行赞助，我们将不胜感激，并期待与您的合作！
-再次感谢您的关注和支持，愿我们的项目能够为您和更多的科研人员带来便捷和帮助。
-
-<div style="text-align: center;">
-  <img src=https://user-images.githubusercontent.com/28528386/224892765-d22a36ad-7bd6-41ed-9e89-f7fe5e88944b.png width="200" height="250"/>
-</div>
 
 ## Starchart
 
